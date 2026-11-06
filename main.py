@@ -20,7 +20,7 @@ def assign_user_session(data: AssignRequest):
     try:
         assigned_uid = 1005
         username = f"pool_user_{assigned_uid}"
-        home_dir = f"/home/{username}"
+        home_dir = f"/tmp/{username}"
         cgroup_path = f"/sys/fs/cgroup/ihc_users/user_{assigned_uid}"
 
         # 1. Simulación / Creación de estructura de directorios aislados (Inodos /home/pool_uX)
